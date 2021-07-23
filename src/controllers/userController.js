@@ -5,6 +5,7 @@ let userDatos = fs.readFileSync (userListPath, 'utf-8');
 let {validationResult} = require ('express-validator');
 const bcryptjs = require('bcryptjs');
 const { send } = require('process');
+const { localsName } = require('ejs');
 let userListOl ;
 if (userDatos == "") {
     userListOl = [];
@@ -91,7 +92,12 @@ let userController = {
     },
 
     profile: function(req,res){
-        res.render('profile'/*,{user:req.session.userLogged}*/); 
+        if(req.session.userLogged){
+            res.render('users/profile',{user:req.session.userLogged}); 
+        } else {
+            res.redirect('/'); 
+        }
+        
     },
     
 }
