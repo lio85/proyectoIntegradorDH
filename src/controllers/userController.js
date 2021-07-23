@@ -17,9 +17,7 @@ let userController = {
     register: function(req,res){
         res.render('users/register');
     },
-    profile: function(req,res){
-        res.render('users/profile'); 
-    },
+    
 
     login: function(req,res){
         // para verificar que trae session
@@ -38,37 +36,7 @@ let userController = {
 
 
 
-    loginProcess: function(req,res){
-        
-        //return res.send(req.body);
-        let errorMessage= 'Las credenciales son inválidas';
-        let userToLogin= userListOl.find(user=>user.email==req.body.email);
-        if(userToLogin){
-            //return res.send('Bienvenido señor '+ userToLogin.lastNameUser)
-            let passwordOk= bcryptjs.compareSync(req.body.password,userToLogin.password);
-            if(passwordOk){
-                delete userToLogin.password;
-				req.session.userLogged= userToLogin;
-                return res.render('users/profile');
-            }
-            return res.render('users/login',{errorMessage});
-        }
-        return res.render('users/login',{errorMessage});
-    },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
     storeRegister: function(req,res){
@@ -102,7 +70,29 @@ let userController = {
         res.redirect('/users/register')
    
 
-    }
+    },
+
+    loginProcess: function(req,res){
+        
+        //return res.send(req.body);
+        let errorMessage= 'Las credenciales son inválidas';
+        let userToLogin= userListOl.find(user=>user.email==req.body.email);
+        if(userToLogin){
+            //return res.send('Bienvenido señor '+ userToLogin.lastNameUser)
+            let passwordOk= bcryptjs.compareSync(req.body.password,userToLogin.password);
+            if(passwordOk){
+                delete userToLogin.password;
+				req.session.userLogged= userToLogin;
+                return res.redirect('/users/profile');
+            }
+            return res.render('users/login',{errorMessage});
+        }
+        return res.render('users/login',{errorMessage});
+    },
+
+    profile: function(req,res){
+        res.render('profile'/*,{user:req.session.userLogged}*/); 
+    },
     
 }
 
