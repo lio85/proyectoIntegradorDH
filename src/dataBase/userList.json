@@ -62,5 +62,13 @@
   "email": "santiago@inglaterra.com",
   "password": "$2a$10$mOXrvb..0n5on21OOWtc4O8./isc.UtXVWri.7ML1IfrcYrOXaJU6",
   "userImage": "1627028987164_img.jpg"
+ },
+ {
+  "id": 9,
+  "user": "Emiliano ",
+  "lastNameUser": "Fernandez",
+  "email": "emiliano@mongolia.com",
+  "password": "$2a$10$.gs1/DgOMDYidsqHQc2uiO2aBs6J6LgfGWoSlrsy6rSMpis7topRC",
+  "userImage": "1627030286517_img.jpg"
  }
 ]

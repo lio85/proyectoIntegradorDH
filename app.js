@@ -1,6 +1,9 @@
 const express = require ('express');
 const app = express();
 const path = require ('path');
+const session= require('express-session');
+
+
 const indexRoutes = require('./src/routes/indexRoutes');
 const productRoutes = require('./src/routes/productRoutes');
 const userRoutes = require('./src/routes/userRoutes');
@@ -10,6 +13,15 @@ const { urlencoded } = require('express');
 // app.listen(3000, () => {
 //     console.log('Servidor 3000 corriendo');
 // })
+
+// configuracion de session como middleware a nivel aplicacion
+app.use (session({
+    secret: "Shhhh, It's a secret",
+    resave: false,  
+    saveUninitialized: false
+}));
+// configuracion de session como middleware a nivel aplicacion
+
 
 app.listen(process.env.PORT || 3000, function(){
     console.log('Servidor corriendo en puerto 3000');
