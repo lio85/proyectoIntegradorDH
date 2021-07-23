@@ -5,7 +5,7 @@ const router = express.Router();
 const userController = require('./../controllers/userController');
 
 //middlewares
-const multer = require('multer');
+//const multer = require('multer');
 const fileUpload = require('../middlewares/userMulter');
 const validationUser = require('../middlewares/validationUsers');
 
@@ -19,7 +19,7 @@ router.post('/register' , fileUpload.single('userImage') , validationUser , user
 router.get('/login' , userController.login);
 
 // proceso de login
-router.post('/login', fileUpload.single('userImage'), userController.loginProcess);
+router.post('/login', userController.loginProcess);
 
 // perfil del usuario
 router.get('/profile' , userController.profile);

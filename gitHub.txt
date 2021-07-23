@@ -1,0 +1,12 @@
+https://github.com/lio85/proyectoIntegradorDH
+
+pasos para vincular un proyecto a un repo remoto
+
+1.
+en la consola:
+
+git init
+
+2. 
+en la consola:
+ git remote add origin https://github.com/lio85/proyectoIntegradorDH.git

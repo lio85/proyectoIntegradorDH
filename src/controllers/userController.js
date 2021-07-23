@@ -25,7 +25,7 @@ let userController = {
     },
 
     loginProcess: function(req,res){
-        return res.send(req.body);
+        //return res.send(req.body);
         let errorMessage= 'Las credenciales son inválidas';
         let userToLogin= userListOl.find(user=>user.email==req.body.email);
         if(userToLogin){

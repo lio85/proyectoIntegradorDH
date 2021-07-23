@@ -54,5 +54,13 @@
   "email": "gabriel@groenlandia.com",
   "password": "$2a$10$EwQ22FN3d703ID0xMjzkHepvfyGc9BPMPNxNwUqKWE5hHouSE.ldS",
   "userImage": "1627022718277.jpg"
+ },
+ {
+  "id": 8,
+  "user": "Santiago",
+  "lastNameUser": "Fiorini",
+  "email": "santiago@inglaterra.com",
+  "password": "$2a$10$mOXrvb..0n5on21OOWtc4O8./isc.UtXVWri.7ML1IfrcYrOXaJU6",
+  "userImage": "1627028987164_img.jpg"
  }
 ]
