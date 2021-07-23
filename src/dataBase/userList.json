@@ -1,0 +1,58 @@
+[
+ {
+  "id": 1,
+  "user": "Lionel",
+  "lastNameUser": "Prats",
+  "email": "lionel@alemania.com",
+  "password": "$2a$10$72z8UA.3kF3wvdxvk9ZWxefbD5g9TwPbiYIvCYxyvYtv7ItY.DpXS",
+  "userImage": "1627018146499.jpg"
+ },
+ {
+  "id": 2,
+  "user": "Sergio",
+  "lastNameUser": "Balestrini",
+  "email": "sergio@bangladesh.com",
+  "password": "$2a$10$UtyBjUL1KyacDJPgUI8yIOLvMNzpsOK7OZEUc3F/7iPsXZz2P36fK",
+  "userImage": "1627018220538.jpg"
+ },
+ {
+  "id": 3,
+  "user": "Juan",
+  "lastNameUser": "Peverelli",
+  "email": "juan@costarica.com",
+  "password": "$2a$10$umO3YaOcYFgevRfPmrIaLuyYd3WKHdFrzrd8Ru2cHPRMLvYr/3fy6",
+  "userImage": "1627018249670.jpg"
+ },
+ {
+  "id": 4,
+  "user": "Mariano",
+  "lastNameUser": "Tolosa",
+  "email": "mariano@dinamarca.com",
+  "password": "$2a$10$UGPcsqgkH1pkrs/x5ZI2LOluh74o1Je7sHMf.eBchncai9a70rt1W",
+  "userImage": "1627018359906.jpg"
+ },
+ {
+  "id": 5,
+  "user": "Gaston",
+  "lastNameUser": "Gambetta",
+  "email": "gaston@estadosunidos.com",
+  "password": "$2a$10$oxZLeZOACxKI8TFOrPwquOWHoJfOahqMuadjbz2/TXnkxdUqJLDci",
+  "userImage": "1627018379206.jpg"
+ },
+ {
+  "id": 6,
+  "user": "Facundo",
+  "lastNameUser": "Franzoni",
+  "email": "facundo@finlandia.com",
+  "password": "$2a$10$xnEW0y2Rrz8vWYD5SY0fyOpSk2awa8wo2InZUVqLBWTmPXNPO01Ee",
+  "userImage": "1627022677682.jpg"
+ },
+ {
+  "id": 7,
+  "user": "Gabriel",
+  "lastNameUser": "Villalobos",
+  "email": "gabriel@groenlandia.com",
+  "password": "$2a$10$EwQ22FN3d703ID0xMjzkHepvfyGc9BPMPNxNwUqKWE5hHouSE.ldS",
+  "userImage": "1627022718277.jpg"
+ }
+]
