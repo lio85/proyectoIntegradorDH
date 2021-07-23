@@ -17,40 +17,17 @@ else {
 let userController = {
     register: function(req,res){
         res.render('users/register');
-    },
-    
-
-    login: function(req,res){
-        // para verificar que trae session
-        //console.log(req.session);
-        res.render('users/login'); 
-    },
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
+    },    
     storeRegister: function(req,res){
         let errors = validationResult(req);
         if(!errors.isEmpty()){
             return res.render('users/register' , {mensajeError : errors.array() , old:req.body})
         };
-
         for(let i=0; i<userListOl.length; i++){
             if(req.body.email == userListOl[i].email){
                return res.render('users/register' , {mensajeError: [{msg:"Este mail es invalido"}]})
-            } }
-
+            } 
+        }
         let newUser= {
             id: userListOl.length+1,
             user: req.body.user,
@@ -63,18 +40,17 @@ let userController = {
         } else{
             newUser.userImage='';
         }
-
-
         userListOl.push(newUser);
         let userListOlupdated= JSON.stringify(userListOl, null, " ");
         fs.writeFileSync(userListPath, userListOlupdated)
         res.redirect('/users/register')
-   
-
     },
-
-    loginProcess: function(req,res){
-        
+    login: function(req,res){
+        // para verificar que trae session
+        //console.log(req.session);
+        res.render('users/login'); 
+    },
+    loginProcess: function(req,res){        
         //return res.send(req.body);
         let errorMessage= 'Las credenciales son inválidas';
         let userToLogin= userListOl.find(user=>user.email==req.body.email);
@@ -90,7 +66,6 @@ let userController = {
         }
         return res.render('users/login',{errorMessage});
     },
-
     profile: function(req,res){
         if(req.session.userLogged){
             res.render('users/profile',{user:req.session.userLogged}); 

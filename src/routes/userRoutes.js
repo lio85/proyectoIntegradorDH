@@ -13,7 +13,7 @@ const validationUser = require('../middlewares/validationUsers');
 router.get('/register' , userController.register);
 
 // proceso de registro
-router.post('/register' , fileUpload.single('userImage') , validationUser , userController.storeRegister);
+router.post('/register', validationUser, fileUpload.single('userImage'),  userController.storeRegister);
 
 // formulario de login
 router.get('/login' , userController.login);
