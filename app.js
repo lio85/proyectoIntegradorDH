@@ -37,21 +37,8 @@ const indexRoutes = require('./src/routes/indexRoutes');
 const productRoutes = require('./src/routes/productRoutes');
 const userRoutes = require('./src/routes/userRoutes');
 
+app.use('/', indexRoutes);
 
+app.use('/product', productRoutes);
 
-
-
-
-
-
-
-
-
-
-
-
-app.use('/' , indexRoutes);
-
-app.use('/product' , productRoutes);
-
-app.use('/users' , userRoutes);
+app.use('/users', userRoutes);

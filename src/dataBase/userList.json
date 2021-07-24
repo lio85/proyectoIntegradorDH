@@ -4,7 +4,21 @@
   "user": "Sergio",
   "lastNameUser": "Balestrini",
   "email": "sergio@bangladesh.com",
-  "password": "$2a$10$kIzbePIN0cEsn3l14cZ7Q.cBt6yLiWSZvq4wD9z.mh4Dok/pe36xe",
+  "userImage": ""
+ },
+ {
+  "id": 2,
+  "user": "Gabriel",
+  "lastNameUser": "Villalobos",
+  "email": "gabriel@groenlandia.com",
+  "userImage": ""
+ },
+ {
+  "id": 3,
+  "user": "Gaston",
+  "lastNameUser": "Gambetta",
+  "email": "gaston@estadosunidos.com",
+  "password": "$2a$10$I81/lkuJfM1miXc9yJsowuDFSKjcFGju2yfWCRB77u5kSXsGOc4ui",
   "userImage": ""
  }
 ]
