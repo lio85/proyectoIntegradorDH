@@ -81,5 +81,17 @@
   "description": "Pie de hierro hecho especial y unicamente para la maceta KAN.\r\n",
   "productImage": "1625432280949.jpg",
   "inStock": true
+ },
+ {
+  "id": 8,
+  "name": "",
+  "category": "Pots",
+  "price": "",
+  "payWay": "on",
+  "cuotas": "3",
+  "interest": "",
+  "description": "",
+  "productImage": "",
+  "inStock": true
  }
 ]

@@ -21,7 +21,8 @@ let userController = {
     storeRegister: function(req,res){
         let errors = validationResult(req);
         if(!errors.isEmpty()){
-            return res.render('users/register' , {mensajeError : errors.array() , old:req.body})
+            console.log(errors.mapped());
+            return res.render('users/register' , {mensajeError : errors.mapped() , old:req.body})
         };
         for(let i=0; i<userListOl.length; i++){
             if(req.body.email == userListOl[i].email){
@@ -57,6 +58,7 @@ let userController = {
         if(userToLogin){
             //return res.send('Bienvenido señor '+ userToLogin.lastNameUser)
             let passwordOk= bcryptjs.compareSync(req.body.password,userToLogin.password);
+            //return res.send(passwordOk)
             if(passwordOk){
                 delete userToLogin.password;
 				req.session.userLogged= userToLogin;
@@ -67,12 +69,11 @@ let userController = {
         return res.render('users/login',{errorMessage});
     },
     profile: function(req,res){
-        if(req.session.userLogged){
-            res.render('users/profile',{user:req.session.userLogged}); 
-        } else {
-            res.redirect('/'); 
-        }
-        
+        res.render('users/profile',{user:req.session.userLogged}); 
+    },
+    logout: function(req,res){
+        req.session.destroy();
+        res.redirect('/'); 
     },
     
 }

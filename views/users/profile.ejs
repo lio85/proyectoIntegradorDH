@@ -16,7 +16,12 @@
         <%- include('../partials/header') %>
 
         <h1>Bienvenido <%=user.user%> <%=user.lastNameUser%>!!</h1> 
-        <img src="/imagenes/userImages/<%=user.userImage%>" alt="">
+
+        <%if(user.userImage){%>
+            <img src="/imagenes/userImages/<%=user.userImage%>" alt=""> 
+        <%} else{%>
+            <img src="/imagenes/userImages/default.JPG" alt="">
+        <%}%> 
 
         </main>
     

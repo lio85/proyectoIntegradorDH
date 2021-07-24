@@ -11,11 +11,7 @@
     <body>
         <%- include('../partials/header') %>
         
-        <% if(locals.mensajeError){%>
-            <%for(let i=0; i<mensajeError.length; i++){%>
-           <p>     <%= mensajeError[i].msg %> </p>
-            <%}%> 
-        <%}%>
+        
         <main id="main">
             <div id="contenedor-general">
                 <div id="div-icono">
@@ -27,26 +23,52 @@
                         <label id="label-usuario" class="labels-formulario">Nombre</label>
                         <input type="text" name="user" id="input-usuario" value= <%= locals.old ? old.user : null %>  > 
                     </div>
+
+                    <% if(locals.mensajeError && mensajeError.user){%>
+                        <p style="color:red; margin-left: 5%;"><%= mensajeError.user.msg %></p>
+                    <%}%>
+
                     <div class="div">
                         <label id="label-usuario" class="labels-formulario">Apellido</label>
                         <input type="text" name="lastNameUser" id="input-usuario" value= <%= locals.old ? old.lastNameUser : null %> > 
                     </div>
+
+                    <% if(locals.mensajeError && mensajeError.lastNameUser){%>
+                        <p style="color:red; margin-left: 5%;"><%= mensajeError.lastNameUser.msg %></p>
+                    <%}%>
+
                     <div class="div">
                         <label id="label-usuario" class="labels-formulario">e-mail</label>
                         <input type="text" name="email" id="input-usuario" value= <%= locals.old ? old.email : null %> > 
                     </div>
+
+                    <% if(locals.mensajeError && mensajeError.email){%>
+                        <p style="color:red; margin-left: 5%;"><%= mensajeError.email.msg %></p>
+                    <%}%>
+
                     <div class="div">
                         <label id="contraseña" class="labels-formulario">Contraseña</label>
                         <input type="password" name="password" id="password" >
                     </div>
+
+                    <% if(locals.mensajeError && mensajeError.password){%>
+                        <p style="color:red; margin-left: 5%;"><%= mensajeError.password.msg %></p>
+                    <%}%>
+
                     <div class="div">
                         <label id="contraseña" class="labels-formulario">Confirmar contraseña</label>
                         <input type="password" id="password" >
                     </div>
+
                     <div class="new-product-button-add-image-div-container"> 
                         <label class="new-product-button-add-image-name">Agregar imágenes</label>
                         <input type="file" name="userImage" accept=".jpg" class="new-product-button-add-image-input">
                     </div>
+
+                    <% if(locals.mensajeError && mensajeError.userImage){%>
+                        <p style="color:red; text-align: center;"><%= mensajeError.userImage.msg %></p>
+                    <%}%>
+
                     <button id="ingresar" type="submit">Registrar</button>
                 </form> 
             </div>
